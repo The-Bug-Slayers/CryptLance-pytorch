@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="simple-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(https://www.reachfirst.com/wp-content/uploads/2018/08/Web-Development.jpg);"></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"></div>
+            <div class="swiper-slide" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=68&amp;txt=Slideshow+Image&amp;w=1920&amp;h=500);"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<div class="highlight-clean">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">A Decentralized Marketplace for Freelancers</h2>
+            <p class="text-center">Cryptlance provides a platform for both Freelancers and Clients to post and bid on Jobs.&nbsp;</p>
+        </div>
+        <div class="buttons"><a class="btn btn-primary" role="button" href="#">Get Started</a><button class="btn btn-light" type="button">View jobs</button></div>
+    </div>
+</div>
+
+{% endblock content%}
