@@ -25,8 +25,12 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Freelancers</a></li>
                 </ul>
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Sign In</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Register</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="/signout/">Sign Out</a></li>
+                    {% else %}
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="/register/">Register</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="/signin/">Sign In</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

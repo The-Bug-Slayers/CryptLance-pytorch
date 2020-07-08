@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="register-photo">
+    <h1 class="text-left">Register</h1>
+    <div class="form-container">
+        <div class="image-holder"></div>
+        <form method="post">
+            {% csrf_token %}
+            <!-- <h2 class="text-center"><strong>Create</strong> an account.</h2>
+            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password1" placeholder="Password"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password2" placeholder="Password (repeat)"></div>
+            <h6>Account type</h6>
+            <div class="form-group">
+                <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="account-type"><label class="form-check-label" for="formCheck-1">Freelancer</label></div>
+            </div>
+            <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="account-type"><label class="form-check-label" for="formCheck-2">Client</label></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div><a class="already" href="signin.html">You already have an account? Login here.</a></form> -->
+            {% for field in form %}
+            <p>
+              {{ field.label_tag }}<br>
+              {{ field }}
+              {% if field.help_text %}
+                <small style="color: grey">{{ field.help_text }}</small>
+              {% endif %}
+              {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+              {% endfor %}
+            </p>
+            {% endfor %}
+            <button type="submit">Sign up</button>
+          </form>
+      </div>
+</div>
+
+
+{% endblock content%}
